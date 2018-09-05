@@ -1,17 +1,16 @@
-import React from "react";
-import Header from "./Header"
-import TicketList from "./TicketList";
-// import Img from 'react-image'
-// import One from '../img/One.jpg'
+import React from 'react';
+import Header from './Header';
+import TicketList from './TicketList';
+
 
 
 function App(){
-  var myApp = {
-      backgroundColor: 'gold',
-      height: '60em'
-    }
+  // var myApp = {
+  //   backgroundColor: 'red',
+  //   height: '60em'
+  // };
   return (
-    <div style={myApp}>
+    <div>
       <Header/>
       <TicketList/>
     </div>
