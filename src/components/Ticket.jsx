@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import vader from '../img/One.jpg'
+import vader from '../img/One.jpg';
 
 function Ticket(props){
   // var myStyledComponentStyles = {
@@ -37,7 +37,7 @@ function Ticket(props){
         }
       `}</style>
 
-    <h3 className="box">{props.location} - {props.names}</h3>
+      <h3 className="box">{props.location} - {props.names}</h3>
       <p><em>{props.issue}</em></p>
       <img src={vader}/>
       <hr/>
