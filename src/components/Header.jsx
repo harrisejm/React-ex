@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Header(){
   var myHeader = {
@@ -9,13 +10,12 @@ function Header(){
     paddingTop: '1px',
     color: 'red'
   };
-  return (
-    <div style={myHeader}>
-      <h1>Help Queue</h1>
-      <hr/>
+    return (
+      <div>
+        <h1>Help </h1>
+        <Link to="/">Home</Link> | <Link to="/newticket">Create Ticket</Link>
+      </div>
+    );
+  }
 
-    </div>
-  );
-}
-
-export default Header;
+  export default Header;
