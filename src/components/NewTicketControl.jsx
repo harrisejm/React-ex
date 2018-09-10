@@ -9,10 +9,15 @@ class NewTicketControl extends React.Component {
     };
   }
 
+  handleClick(){
+    console.log('Eddie is a pretty nice guy!');
+  }
+
   render(){
     return (
       <div>
         <p>This is the NewTicketControl component!</p>
+        <strong onClick={this.handleClick}>Press Me NOW</strong>
       </div>
     );
   }
