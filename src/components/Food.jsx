@@ -14,7 +14,7 @@ function Food(props){
           {availableProduce}
         </li>
 
-        )}
+      )}
 
 
     </div>
@@ -27,5 +27,5 @@ Food.propTypes={
   month: PropTypes.string.isRequired,
   selection: PropTypes.string.isRequired,
 
-}
+};
 export default Food;

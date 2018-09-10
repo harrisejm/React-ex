@@ -15,9 +15,9 @@ function App(){
     <div>
       <Header/>
       <Switch>
-         <Route exact path='/' component={TicketList} />
-         <Route path='/newticket' component={NewTicketControl} />
-         <Route component={Error404} />
+        <Route exact path='/' component={TicketList} />
+        <Route path='/newticket' component={NewTicketControl} />
+        <Route component={Error404} />
       </Switch>
 
     </div>

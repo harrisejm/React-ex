@@ -1,8 +1,8 @@
 import React from 'react';
 
-class NewTicketControl extends React.Component{
+class NewTicketControl extends React.Component {
 
-  construction(props) {
+  constructor(props) {
     super(props);
     this.state = {
       formVisibleOnPage: false
@@ -10,7 +10,7 @@ class NewTicketControl extends React.Component{
   }
 
   render(){
-    return(
+    return (
       <div>
         <p>This is the NewTicketControl component!</p>
       </div>

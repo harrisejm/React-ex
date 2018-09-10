@@ -10,12 +10,12 @@ function Header(){
     paddingTop: '1px',
     color: 'red'
   };
-    return (
-      <div>
-        <h1>Help </h1>
-        <Link to="/">Home</Link> | <Link to="/newticket">Create Ticket</Link>
-      </div>
-    );
-  }
+  return (
+    <div>
+      <h1>Help </h1>
+      <Link to="/">Home</Link> | <Link to="/newticket">Create Ticket</Link>
+    </div>
+  );
+}
 
-  export default Header;
+export default Header;
