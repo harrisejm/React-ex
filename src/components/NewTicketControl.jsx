@@ -10,7 +10,8 @@ class NewTicketControl extends React.Component {
   }
 
   handleClick(){
-    console.log('Eddie is a pretty nice guy!');
+    this.setState({formVisibleOnPage: true});
+    console.log('formVisibleOnPage is currently set to:' +this.state.formVisibleOnPage);
   }
 
   render(){
