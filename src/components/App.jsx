@@ -6,22 +6,35 @@ import NewTicketControl from './NewTicketControl';
 import Error404 from './Error404';
 
 
-function App(){
-  // var myApp = {
-  //   backgroundColor: 'red',
-  //   height: '60em'
-  // };
-  return (
-    <div>
-      <Header/>
-      <Switch>
-        <Route exact path='/' component={TicketList} />
-        <Route path='/newticket' component={NewTicketControl} />
-        <Route component={Error404} />
-      </Switch>
+class App extends React.Component {
 
-    </div>
-  );
+  constructor(props){
+    super(props);
+    this.state = {
+      masterTicketList: []
+    };
+    this.handleAddingNewTicketToList = this.handleAddingNewTicketToList.bind(this);
+  }
+
+  handleAddingNewTicketToList(newTicket) {
+    let newMasterTicketList = this.state.masterTicketList.slice();
+    newMasterTicketList.push(newTicket);
+    this.setState({masterTicketList: newMasterTicketList});
+  }
+
+  render() {
+    return(
+      <div>
+        <Header/>
+        <Switch>
+          <Route exact path='/' component={TicketList} />
+          <Route path='/newticket' render={()=><NewTicketControl onNewTicketCreation={this.handleAddingNewTicketToList}/>} />
+          <Route component={Error404} />
+        </Switch>
+
+      </div>
+    );
+    }
 }
 
 export default App;
