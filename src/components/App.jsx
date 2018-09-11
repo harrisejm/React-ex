@@ -20,7 +20,7 @@ class App extends React.Component {
     var newMasterTicketList = this.state.masterTicketList.slice();
     newMasterTicketList.push(newTicket);
     this.setState({masterTicketList: newMasterTicketList});
-}
+  }
 
   render() {
     return(
@@ -34,7 +34,7 @@ class App extends React.Component {
 
       </div>
     );
-    }
+  }
 }
 
 export default App;
