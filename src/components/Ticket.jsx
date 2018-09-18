@@ -11,11 +11,9 @@ function Ticket(props){
   //   // paddingTop: '10px',
   //   color: 'red'
   // };
-
-  return (
   // <div style={myStyledComponentStyles}>
+  const ticketInformation =
     <div>
-
       <style jsx global>{`
         div {
           background-color: #00FA9A;
@@ -41,10 +39,23 @@ function Ticket(props){
       <h4>{props.formattedWaitTime}</h4>
       <p><em>{props.issue}</em></p>
       <img src={vader}/>
-      <hr/>
-    </div>
-  );
-}
+        <hr/>
+           </div>;
+
+           if (props.currentRouterPath === '/admin'){
+             return (
+               <div onClick={() => {props.onTicketSelection(props.ticketId);}}>
+                 {ticketInformation}
+               </div>
+             );
+         } else {
+           return (
+             <div>
+               {ticketInformation}
+             </div>
+           );
+         }
+       }
 
 
 Ticket.propTypes = {
@@ -52,7 +63,9 @@ Ticket.propTypes = {
   location: PropTypes.string.isRequired,
   issue: PropTypes.string,
   formattedWaitTime: PropTypes.string.isRequired,
-  currentRouterPath: PropTypes.string
+  currentRouterPath: PropTypes.string,
+  onTicketSelection: PropTypes.func,
+  ticketId: PropTypes.string.isRequired
 };
 
 export default Ticket;
