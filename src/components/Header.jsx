@@ -12,9 +12,9 @@ var myHeader = {
 function Header(){
 
   return (
-    <div styles={myHeader}>
+    <div style={myHeader}>
       <h1>Help </h1>
-      <Link to="/">Home</Link> | <Link to="/newticket">Create Ticket</Link> | <Link to="/admin">Admin</Link> 
+      <Link to="/">Home</Link> | <Link to="/newticket">Create Ticket</Link> | <Link to="/admin">Admin</Link>
     </div>
   );
 }

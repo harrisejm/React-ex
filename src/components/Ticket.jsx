@@ -33,29 +33,29 @@ function Ticket(props){
           background-color: #FF00FF;
           font-size: 70px;
         }
-      `}</style>
+        `}</style>
 
       <h3 className="box">{props.location} - {props.names}</h3>
       <h4>{props.formattedWaitTime}</h4>
       <p><em>{props.issue}</em></p>
       <img src={vader}/>
-        <hr/>
-           </div>;
+      <hr/>
+    </div>;
 
-           if (props.currentRouterPath === '/admin'){
-             return (
-               <div onClick={() => {props.onTicketSelection(props.ticketId);}}>
-                 {ticketInformation}
-               </div>
-             );
-         } else {
-           return (
-             <div>
-               {ticketInformation}
-             </div>
-           );
-         }
-       }
+  if (props.currentRouterPath === '/admin'){
+    return (
+      <div onClick={() => {props.onTicketSelection(props.ticketId);}}>
+        {ticketInformation}
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        {ticketInformation}
+      </div>
+    );
+  }
+}
 
 
 Ticket.propTypes = {

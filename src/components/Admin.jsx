@@ -8,16 +8,16 @@ function Admin(props){
   if (props.selectedTicket != null){
     optionalSelectedTicketContent =  <TicketDetail selectedTicket={props.ticketList[props.selectedTicket]}/>;
   }
-    return (
-      <div>
-        <h2>Admin</h2>
-        {optionalSelectedTicketContent}
-        <TicketList
-          ticketList={props.ticketList}
-          currentRouterPath={props.currentRouterPath}
-          onTicketSelection={props.onTicketSelection}/>
-      </div>
-    );
+  return (
+    <div>
+      <h2>Admin</h2>
+      {optionalSelectedTicketContent}
+      <TicketList
+        ticketList={props.ticketList}
+        currentRouterPath={props.currentRouterPath}
+        onTicketSelection={props.onTicketSelection}/>
+    </div>
+  );
 }
 
 Admin.propTypes = {
