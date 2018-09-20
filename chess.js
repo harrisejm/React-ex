@@ -10,13 +10,21 @@ let BoardPos = function(occupied, positionY, positionX) {
 }
 
 let arr = [];
+let arrTest = [];
 
 for (let i = 0; i < 8; i++) {
 let position = [];
   for (let a = 0; a < 8; a++) {
   //let position = board[i][a];
 // let position = "[" + i + "," + a +"]";
-// let position = new BoardPos();
+   if (i === 0 || i === 1 || i === 6 || i === 7) {
+     let position = new BoardPos(i,a,true);
+     arrTest.push(position);
+   } else {
+       let position = new BoardPos(i,a,false);
+       arrTest.push(position);
+   }
+
 
    position.push("[" + i + "," + a +"]");
    if (a === 7) {
@@ -56,4 +64,5 @@ pawn1.movePawn(testMove);
 document.getElementById("test").innerHTML = board[pawn1.positionY][pawn1.positionX];
 document.getElementById("test1").innerHTML = pawn1.positionY;
 document.getElementById("test2").innerHTML = pawn1.positionX;
-document.getElementById("test3").innerHTML = arr[0];
+document.getElementById("test3").innerHTML = arr;
+document.getElementById("test3").innerHTML = arrTest;
